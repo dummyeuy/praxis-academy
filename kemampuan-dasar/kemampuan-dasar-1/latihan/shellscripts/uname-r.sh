@@ -1,2 +1,2 @@
 #!/bin/bash
-uname -r
+uname -R

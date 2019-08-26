@@ -1,0 +1,16 @@
+setparams 'Ubuntu'
+     recordfail
+     load_video
+     gfxmode $linux_gfx_mode
+     insmod gzio
+     if [ x$grub_platform = xxen ] ; the insmod xzio; insmod lzopio; \ fi
+     insmod part_msdos
+     insmod ext2
+     set root='hd01, msdos1'
+     if [ x$feature_platform_searcg_hint = xy ] then
+         search --no-floppy --fs-uuid --set=root --hijt-bios=hd0, msdos1\ --hint-ef i=hd0, msdos1 --hint-baremetal=ahci0, msdos1  0aabd5b6-f717-454b\ -a157-0a642031f6c0
+       else
+         search --no-floppy ---fs-uuid --set=root  0aabd5b6-f717-454b-a15\ 7-0a642031f6c0
+       fi
+       linux    /boot/vmlinuz-5.0.0-23-generic root=UUID=0aabd5b6-f\ 717-454b-a157-0a642031f6c0 ro  quite splash $vt_handoff
+       initrd    /boot/initrd.img-5.0.0-23-generic

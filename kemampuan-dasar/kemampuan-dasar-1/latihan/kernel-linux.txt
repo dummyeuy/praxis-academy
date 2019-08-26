@@ -1,0 +1,11 @@
+Untuk mencari lokasi Kernel Linux, dapat dicari filenya secara manual pada direktori:
+>Computer
+>proc, lali cari file bernama "version"
+Hasilnya:
+Linux version 5.0.0-23-generic )buildd@lgw01-amd64-030) (gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1-18.04.1)) #24~18.04.1-Ubuntu SMP Mon Jul 29 16:12:28 UTC 2019
+
+Atau, dapat dicek dengan memasukkan command:
+   uname -a
+atau command:
+   uname -r
+Hasil yg ditampilkan kurang lebih serupa, dengan ada beberapa pengurangan detil informasi sistem

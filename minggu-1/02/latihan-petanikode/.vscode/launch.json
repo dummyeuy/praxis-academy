@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Game",
+            "request": "launch",
+            "mainClass": "app.Game",
+            "projectName": "dasar"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Match",
+            "request": "launch",
+            "mainClass": "app.Match",
+            "projectName": "dasar"
+        }
+    ]
+}

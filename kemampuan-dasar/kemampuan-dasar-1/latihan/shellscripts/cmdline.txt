@@ -1,0 +1,585 @@
+dummy@dummy-VirtualBox:~$ env | grep -i DESKTOP_session
+DESKTOP_SESSION=ubuntu
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+dummy@dummy-VirtualBox:~$ cat /ext/X11/default-display-manager
+cat: /ext/X11/default-display-manager: No such file or directory
+dummy@dummy-VirtualBox:~$ sudo app-get install wmctrl
+[sudo] password for dummy: 
+sudo: app-get: command not found
+dummy@dummy-VirtualBox:~$ wmctrl -m
+
+Command 'wmctrl' not found, but can be installed with:
+
+sudo apt install wmctrl
+
+dummy@dummy-VirtualBox:~$ sudo apt install wmctrl
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  wmctrl
+0 upgraded, 1 newly installed, 0 to remove and 77 not upgraded.
+Need to get 20,0 kB of archives.
+After this operation, 54,3 kB of additional disk space will be used.
+Get:1 http://id.archive.ubuntu.com/ubuntu bionic/universe amd64 wmctrl amd64 1.07-7build1 [20,0 kB]
+Fetched 20,0 kB in 2s (12,8 kB/s)
+Selecting previously unselected package wmctrl.
+(Reading database ... 126227 files and directories currently installed.)
+Preparing to unpack .../wmctrl_1.07-7build1_amd64.deb ...
+Unpacking wmctrl (1.07-7build1) ...
+Setting up wmctrl (1.07-7build1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+dummy@dummy-VirtualBox:~$ wmctrl -m
+Name: GNOME Shell
+Class: N/A
+PID: N/A
+Window manager's "showing the desktop" mode: N/A
+dummy@dummy-VirtualBox:~$ DESKTOP_SESSION
+DESKTOP_SESSION: command not found
+dummy@dummy-VirtualBox:~$ $DESKTOP_SESSION
+ubuntu: command not found
+dummy@dummy-VirtualBox:~$ env | grep DESKTOP_SESSION=
+DESKTOP_SESSION=ubuntu
+dummy@dummy-VirtualBox:~$ ls /usr/bin/*session
+/usr/bin/dbus-run-session  /usr/bin/gnome-session-custom-session
+/usr/bin/gnome-session
+dummy@dummy-VirtualBox:~$ echo $GDMSESSION
+ubuntu
+dummy@dummy-VirtualBox:~$ pgrep -l "gnome|kde|mate|cinnamon|lxde|xfce|jwm
+> ^C
+dummy@dummy-VirtualBox:~$ pgrep -l "gnome|kde|mate|cinnamon|lxde|xfce|jvm"
+21 kdevtmpfs
+899 gnome-session-b
+905 gnome-shell
+1105 gnome-keyring-d
+1122 gnome-session-b
+1263 gnome-shell
+1308 gnome-shell-cal
+1588 gnome-terminal-
+1617 gnome-software
+dummy@dummy-VirtualBox:~$ HardInfo
+HardInfo: command not found
+dummy@dummy-VirtualBox:~$ ps -A | egrep -i "gnome|kde|mate|cinnamon|lxde|xfce|jvm"
+   21 ?        00:00:00 kdevtmpfs
+  899 tty1     00:00:00 gnome-session-b
+  905 tty1     00:00:12 gnome-shell
+ 1105 ?        00:00:00 gnome-keyring-d
+ 1122 tty2     00:00:00 gnome-session-b
+ 1263 tty2     00:00:49 gnome-shell
+ 1308 ?        00:00:00 gnome-shell-cal
+ 1588 ?        00:00:05 gnome-terminal-
+ 1617 tty2     00:00:09 gnome-software
+dummy@dummy-VirtualBox:~$ HardInfo ps -A | egrep -i "gnome|kde|mate|cinnamon|lxde|xfce|jvm"
+HardInfo: command not found
+dummy@dummy-VirtualBox:~$ $HardInfo
+dummy@dummy-VirtualBox:~$ HardInfo
+HardInfo: command not found
+dummy@dummy-VirtualBox:~$ &HardInfo
+bash: syntax error near unexpected token `&'
+dummy@dummy-VirtualBox:~$ $HardInfo
+dummy@dummy-VirtualBox:~$ $SHELL
+dummy@dummy-VirtualBox:~$ SHELL
+SHELL: command not found
+dummy@dummy-VirtualBox:~$ $0
+dummy@dummy-VirtualBox:~$ echo HardInfo
+HardInfo
+dummy@dummy-VirtualBox:~$ echo $0
+/bin/bash
+dummy@dummy-VirtualBox:~$ echo $SHELL
+/bin/bash
+dummy@dummy-VirtualBox:~$ uname -r
+5.0.0-23-generic
+dummy@dummy-VirtualBox:~$ uname -r
+5.0.0-23-generic
+dummy@dummy-VirtualBox:~$ uname a-
+uname: extra operand ‘a-’
+Try 'uname --help' for more information.
+dummy@dummy-VirtualBox:~$ uname -a
+Linux dummy-VirtualBox 5.0.0-23-generic #24~18.04.1-Ubuntu SMP Mon Jul 29 16:12:28 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+dummy@dummy-VirtualBox:~$ ls
+Desktop    Downloads         hardinfo_report.txt  Pictures  Templates
+Documents  examples.desktop  Music                Public    Videos
+dummy@dummy-VirtualBox:~$ ^C
+dummy@dummy-VirtualBox:~$ ^C
+dummy@dummy-VirtualBox:~$ ^C
+dummy@dummy-VirtualBox:~$ ls R-
+ls: cannot access 'R-': No such file or directory
+dummy@dummy-VirtualBox:~$ ls r-
+ls: cannot access 'r-': No such file or directory
+dummy@dummy-VirtualBox:~$ ls-a
+ls-a: command not found
+dummy@dummy-VirtualBox:~$ ls -r
+Videos     Public    Music                examples.desktop  Documents
+Templates  Pictures  hardinfo_report.txt  Downloads         Desktop
+dummy@dummy-VirtualBox:~$ mkdir directory
+dummy@dummy-VirtualBox:~$ mkdir Music
+mkdir: cannot create directory ‘Music’: File exists
+dummy@dummy-VirtualBox:~$ mkdir FolderBaru
+dummy@dummy-VirtualBox:~$ ls FolderBaru
+dummy@dummy-VirtualBox:~$ history
+    1  echo HardInfo
+    2  echo $0
+    3  echo $SHELL
+    4  uname -r
+    5  uname a-
+    6  uname -a
+    7  ls
+    8  ls R-
+    9  ls r-
+   10  ls-a
+   11  ls -r
+   12  mkdir directory
+   13  mkdir Music
+   14  mkdir FolderBaru
+   15  ls FolderBaru
+   16  history
+dummy@dummy-VirtualBox:~$ mv FolderBaru
+mv: missing destination file operand after 'FolderBaru'
+Try 'mv --help' for more information.
+dummy@dummy-VirtualBox:~$ mv --help
+Usage: mv [OPTION]... [-T] SOURCE DEST
+  or:  mv [OPTION]... SOURCE... DIRECTORY
+  or:  mv [OPTION]... -t DIRECTORY SOURCE...
+Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
+
+Mandatory arguments to long options are mandatory for short options too.
+      --backup[=CONTROL]       make a backup of each existing destination file
+  -b                           like --backup but does not accept an argument
+  -f, --force                  do not prompt before overwriting
+  -i, --interactive            prompt before overwrite
+  -n, --no-clobber             do not overwrite an existing file
+If you specify more than one of -i, -f, -n, only the final one takes effect.
+      --strip-trailing-slashes  remove any trailing slashes from each SOURCE
+                                 argument
+  -S, --suffix=SUFFIX          override the usual backup suffix
+  -t, --target-directory=DIRECTORY  move all SOURCE arguments into DIRECTORY
+  -T, --no-target-directory    treat DEST as a normal file
+  -u, --update                 move only when the SOURCE file is newer
+                                 than the destination file or when the
+                                 destination file is missing
+  -v, --verbose                explain what is being done
+  -Z, --context                set SELinux security context of destination
+                                 file to default type
+      --help     display this help and exit
+      --version  output version information and exit
+
+The backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.
+The version control method may be selected via the --backup option or through
+the VERSION_CONTROL environment variable.  Here are the values:
+
+  none, off       never make backups (even if --backup is given)
+  numbered, t     make numbered backups
+  existing, nil   numbered if numbered backups exist, simple otherwise
+  simple, never   always make simple backups
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/mv>
+or available locally via: info '(coreutils) mv invocation'
+dummy@dummy-VirtualBox:~$ apt-get
+apt 1.6.11 (amd64)
+Usage: apt-get [options] command
+       apt-get [options] install|remove pkg1 [pkg2 ...]
+       apt-get [options] source pkg1 [pkg2 ...]
+
+apt-get is a command line interface for retrieval of packages
+and information about them from authenticated sources and
+for installation, upgrade and removal of packages together
+with their dependencies.
+
+Most used commands:
+  update - Retrieve new lists of packages
+  upgrade - Perform an upgrade
+  install - Install new packages (pkg is libc6 not libc6.deb)
+  remove - Remove packages
+  purge - Remove packages and config files
+  autoremove - Remove automatically all unused packages
+  dist-upgrade - Distribution upgrade, see apt-get(8)
+  dselect-upgrade - Follow dselect selections
+  build-dep - Configure build-dependencies for source packages
+  clean - Erase downloaded archive files
+  autoclean - Erase old downloaded archive files
+  check - Verify that there are no broken dependencies
+  source - Download source archives
+  download - Download the binary package into the current directory
+  changelog - Download and display the changelog for the given package
+
+See apt-get(8) for more information about the available commands.
+Configuration options and syntax is detailed in apt.conf(5).
+Information about how to configure sources can be found in sources.list(5).
+Package and version choices can be expressed via apt_preferences(5).
+Security details are available in apt-secure(8).
+                                        This APT has Super Cow Powers.
+dummy@dummy-VirtualBox:~$ date
+Sen Agu 26 01:36:02 WIB 2019
+dummy@dummy-VirtualBox:~$ time
+
+real	0m0,000s
+user	0m0,000s
+sys	0m0,000s
+dummy@dummy-VirtualBox:~$ env
+CLUTTER_IM_MODULE=xim
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LC_MEASUREMENT=id_ID.UTF-8
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LC_PAPER=id_ID.UTF-8
+LC_MONETARY=id_ID.UTF-8
+XDG_MENU_PREFIX=gnome-
+LANG=en_US.UTF-8
+DISPLAY=:0
+GNOME_SHELL_SESSION_MODE=ubuntu
+COLORTERM=truecolor
+DESKTOP_AUTOSTART_ID=1020d91e7c5b1e6cef156674836390205600000011220007
+USERNAME=dummy
+XDG_VTNR=2
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+LC_NAME=id_ID.UTF-8
+XDG_SESSION_ID=2
+USER=dummy
+DESKTOP_SESSION=ubuntu
+QT4_IM_MODULE=xim
+TEXTDOMAINDIR=/usr/share/locale/
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/fe79d638_5af6_43b2_996f_ac3cbfb7d640
+PWD=/home/dummy
+HOME=/home/dummy
+TEXTDOMAIN=im-config
+SSH_AGENT_PID=1217
+QT_ACCESSIBILITY=1
+XDG_SESSION_TYPE=x11
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+XDG_SESSION_DESKTOP=ubuntu
+LC_ADDRESS=id_ID.UTF-8
+LC_NUMERIC=id_ID.UTF-8
+GTK_MODULES=gail:atk-bridge
+WINDOWPATH=2
+TERM=xterm-256color
+SHELL=/bin/bash
+VTE_VERSION=5202
+QT_IM_MODULE=xim
+XMODIFIERS=@im=ibus
+IM_CONFIG_PHASE=2
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+GNOME_TERMINAL_SERVICE=:1.58
+XDG_SEAT=seat0
+SHLVL=3
+LC_TELEPHONE=id_ID.UTF-8
+GDMSESSION=ubuntu
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+LOGNAME=dummy
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+XDG_RUNTIME_DIR=/run/user/1000
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LC_IDENTIFICATION=id_ID.UTF-8
+SESSION_MANAGER=local/dummy-VirtualBox:@/tmp/.ICE-unix/1122,unix/dummy-VirtualBox:/tmp/.ICE-unix/1122
+LESSOPEN=| /usr/bin/lesspipe %s
+GTK_IM_MODULE=ibus
+LC_TIME=id_ID.UTF-8
+_=/usr/bin/env
+dummy@dummy-VirtualBox:~$ mc
+
+Command 'mc' not found, but can be installed with:
+
+sudo apt install mc
+
+dummy@dummy-VirtualBox:~$ echo &mc
+[1] 9717
+
+
+Command 'mc' not found, but can be installed with:
+
+sudo apt install mc
+
+[1]+  Done                    echo
+dummy@dummy-VirtualBox:~$ echo $mc
+
+dummy@dummy-VirtualBox:~$ echo
+
+dummy@dummy-VirtualBox:~$ ls -al
+total 148
+drwxr-xr-x 18 dummy dummy  4096 Agu 26 01:40 .
+drwxr-xr-x  3 root  root   4096 Agu 25 21:40 ..
+-rw-r--r--  1 dummy dummy   220 Agu 25 21:40 .bash_logout
+-rw-r--r--  1 dummy dummy  3771 Agu 25 21:40 .bashrc
+drwx------ 12 dummy dummy  4096 Agu 26 01:25 .cache
+-rw-rw-r--  1 dummy dummy   145 Agu 26 01:40 cmdline.txt
+drwx------ 14 dummy dummy  4096 Agu 25 23:54 .config
+drwxr-xr-x  2 dummy dummy  4096 Agu 25 21:52 Desktop
+drwxr-xr-x  2 dummy dummy  4096 Agu 26 01:32 directory
+drwxr-xr-x  2 dummy dummy  4096 Agu 25 21:52 Documents
+drwxr-xr-x  2 dummy dummy  4096 Agu 25 21:52 Downloads
+-rw-r--r--  1 dummy dummy  8980 Agu 25 21:40 examples.desktop
+drwxr-xr-x  2 dummy dummy  4096 Agu 26 01:32 FolderBaru
+drwx------  3 dummy dummy  4096 Agu 25 23:44 .gnupg
+drwxr--r--  2 dummy dummy  4096 Agu 25 23:48 .hardinfo
+-rw-rw-r--  1 dummy dummy 41485 Agu 25 23:53 hardinfo_report.txt
+-rw-------  1 dummy dummy   716 Agu 25 22:52 .ICEauthority
+drwx------  3 dummy dummy  4096 Agu 25 21:52 .local
+drwxr-xr-x  2 dummy dummy  4096 Agu 25 21:52 Music
+drwxr-xr-x  2 dummy dummy  4096 Agu 25 21:52 Pictures
+-rw-r--r--  1 dummy dummy   807 Agu 25 21:40 .profile
+drwxr-xr-x  2 dummy dummy  4096 Agu 25 21:52 Public
+drwx------  2 dummy dummy  4096 Agu 25 23:44 .ssh
+-rw-r--r--  1 dummy dummy     0 Agu 25 23:01 .sudo_as_admin_successful
+drwxr-xr-x  2 dummy dummy  4096 Agu 25 21:52 Templates
+drwxr-xr-x  2 dummy dummy  4096 Agu 25 21:52 Videos
+dummy@dummy-VirtualBox:~$ cat FolderBaru
+cat: FolderBaru: Is a directory
+dummy@dummy-VirtualBox:~$ cat Music
+cat: Music: Is a directory
+dummy@dummy-VirtualBox:~$ cat > HardInfo
+
+history
+
+^C
+dummy@dummy-VirtualBox:~$ cat HardInfo
+
+history
+
+dummy@dummy-VirtualBox:~$ cat Tools
+cat: Tools: No such file or directory
+dummy@dummy-VirtualBox:~$ sudo apt-get
+[sudo] password for dummy: 
+apt 1.6.11 (amd64)
+Usage: apt-get [options] command
+       apt-get [options] install|remove pkg1 [pkg2 ...]
+       apt-get [options] source pkg1 [pkg2 ...]
+
+apt-get is a command line interface for retrieval of packages
+and information about them from authenticated sources and
+for installation, upgrade and removal of packages together
+with their dependencies.
+
+Most used commands:
+  update - Retrieve new lists of packages
+  upgrade - Perform an upgrade
+  install - Install new packages (pkg is libc6 not libc6.deb)
+  remove - Remove packages
+  purge - Remove packages and config files
+  autoremove - Remove automatically all unused packages
+  dist-upgrade - Distribution upgrade, see apt-get(8)
+  dselect-upgrade - Follow dselect selections
+  build-dep - Configure build-dependencies for source packages
+  clean - Erase downloaded archive files
+  autoclean - Erase old downloaded archive files
+  check - Verify that there are no broken dependencies
+  source - Download source archives
+  download - Download the binary package into the current directory
+  changelog - Download and display the changelog for the given package
+
+See apt-get(8) for more information about the available commands.
+Configuration options and syntax is detailed in apt.conf(5).
+Information about how to configure sources can be found in sources.list(5).
+Package and version choices can be expressed via apt_preferences(5).
+Security details are available in apt-secure(8).
+                                        This APT has Super Cow Powers.
+dummy@dummy-VirtualBox:~$ sudo apt-get check
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+dummy@dummy-VirtualBox:~$ man
+What manual page do you want?
+dummy@dummy-VirtualBox:~$ rsync
+rsync  version 3.1.2  protocol version 31
+Copyright (C) 1996-2015 by Andrew Tridgell, Wayne Davison, and others.
+Web site: http://rsync.samba.org/
+Capabilities:
+    64-bit files, 64-bit inums, 64-bit timestamps, 64-bit long ints,
+    socketpairs, hardlinks, symlinks, IPv6, batchfiles, inplace,
+    append, ACLs, xattrs, iconv, symtimes, prealloc
+
+rsync comes with ABSOLUTELY NO WARRANTY.  This is free software, and you
+are welcome to redistribute it under certain conditions.  See the GNU
+General Public Licence for details.
+
+rsync is a file transfer program capable of efficient remote update
+via a fast differencing algorithm.
+
+Usage: rsync [OPTION]... SRC [SRC]... DEST
+  or   rsync [OPTION]... SRC [SRC]... [USER@]HOST:DEST
+  or   rsync [OPTION]... SRC [SRC]... [USER@]HOST::DEST
+  or   rsync [OPTION]... SRC [SRC]... rsync://[USER@]HOST[:PORT]/DEST
+  or   rsync [OPTION]... [USER@]HOST:SRC [DEST]
+  or   rsync [OPTION]... [USER@]HOST::SRC [DEST]
+  or   rsync [OPTION]... rsync://[USER@]HOST[:PORT]/SRC [DEST]
+The ':' usages connect via remote shell, while '::' & 'rsync://' usages connect
+to an rsync daemon, and require SRC or DEST to start with a module name.
+
+Options
+ -v, --verbose               increase verbosity
+     --info=FLAGS            fine-grained informational verbosity
+     --debug=FLAGS           fine-grained debug verbosity
+     --msgs2stderr           special output handling for debugging
+ -q, --quiet                 suppress non-error messages
+     --no-motd               suppress daemon-mode MOTD (see manpage caveat)
+ -c, --checksum              skip based on checksum, not mod-time & size
+ -a, --archive               archive mode; equals -rlptgoD (no -H,-A,-X)
+     --no-OPTION             turn off an implied OPTION (e.g. --no-D)
+ -r, --recursive             recurse into directories
+ -R, --relative              use relative path names
+     --no-implied-dirs       don't send implied dirs with --relative
+ -b, --backup                make backups (see --suffix & --backup-dir)
+     --backup-dir=DIR        make backups into hierarchy based in DIR
+     --suffix=SUFFIX         set backup suffix (default ~ w/o --backup-dir)
+ -u, --update                skip files that are newer on the receiver
+     --inplace               update destination files in-place (SEE MAN PAGE)
+     --append                append data onto shorter files
+     --append-verify         like --append, but with old data in file checksum
+ -d, --dirs                  transfer directories without recursing
+ -l, --links                 copy symlinks as symlinks
+ -L, --copy-links            transform symlink into referent file/dir
+     --copy-unsafe-links     only "unsafe" symlinks are transformed
+     --safe-links            ignore symlinks that point outside the source tree
+     --munge-links           munge symlinks to make them safer (but unusable)
+ -k, --copy-dirlinks         transform symlink to a dir into referent dir
+ -K, --keep-dirlinks         treat symlinked dir on receiver as dir
+ -H, --hard-links            preserve hard links
+ -p, --perms                 preserve permissions
+ -E, --executability         preserve the file's executability
+     --chmod=CHMOD           affect file and/or directory permissions
+ -A, --acls                  preserve ACLs (implies --perms)
+ -X, --xattrs                preserve extended attributes
+ -o, --owner                 preserve owner (super-user only)
+ -g, --group                 preserve group
+     --devices               preserve device files (super-user only)
+     --copy-devices          copy device contents as regular file
+     --specials              preserve special files
+ -D                          same as --devices --specials
+ -t, --times                 preserve modification times
+ -O, --omit-dir-times        omit directories from --times
+ -J, --omit-link-times       omit symlinks from --times
+     --super                 receiver attempts super-user activities
+     --fake-super            store/recover privileged attrs using xattrs
+ -S, --sparse                handle sparse files efficiently
+     --preallocate           allocate dest files before writing them
+ -n, --dry-run               perform a trial run with no changes made
+ -W, --whole-file            copy files whole (without delta-xfer algorithm)
+ -x, --one-file-system       don't cross filesystem boundaries
+ -B, --block-size=SIZE       force a fixed checksum block-size
+ -e, --rsh=COMMAND           specify the remote shell to use
+     --rsync-path=PROGRAM    specify the rsync to run on the remote machine
+     --existing              skip creating new files on receiver
+     --ignore-existing       skip updating files that already exist on receiver
+     --remove-source-files   sender removes synchronized files (non-dirs)
+     --del                   an alias for --delete-during
+     --delete                delete extraneous files from destination dirs
+     --delete-before         receiver deletes before transfer, not during
+     --delete-during         receiver deletes during the transfer
+     --delete-delay          find deletions during, delete after
+     --delete-after          receiver deletes after transfer, not during
+     --delete-excluded       also delete excluded files from destination dirs
+     --ignore-missing-args   ignore missing source args without error
+     --delete-missing-args   delete missing source args from destination
+     --ignore-errors         delete even if there are I/O errors
+     --force                 force deletion of directories even if not empty
+     --max-delete=NUM        don't delete more than NUM files
+     --max-size=SIZE         don't transfer any file larger than SIZE
+     --min-size=SIZE         don't transfer any file smaller than SIZE
+     --partial               keep partially transferred files
+     --partial-dir=DIR       put a partially transferred file into DIR
+     --delay-updates         put all updated files into place at transfer's end
+ -m, --prune-empty-dirs      prune empty directory chains from the file-list
+     --numeric-ids           don't map uid/gid values by user/group name
+     --usermap=STRING        custom username mapping
+     --groupmap=STRING       custom groupname mapping
+     --chown=USER:GROUP      simple username/groupname mapping
+     --timeout=SECONDS       set I/O timeout in seconds
+     --contimeout=SECONDS    set daemon connection timeout in seconds
+ -I, --ignore-times          don't skip files that match in size and mod-time
+ -M, --remote-option=OPTION  send OPTION to the remote side only
+     --size-only             skip files that match in size
+     --modify-window=NUM     compare mod-times with reduced accuracy
+ -T, --temp-dir=DIR          create temporary files in directory DIR
+ -y, --fuzzy                 find similar file for basis if no dest file
+     --compare-dest=DIR      also compare destination files relative to DIR
+     --copy-dest=DIR         ... and include copies of unchanged files
+     --link-dest=DIR         hardlink to files in DIR when unchanged
+ -z, --compress              compress file data during the transfer
+     --compress-level=NUM    explicitly set compression level
+     --skip-compress=LIST    skip compressing files with a suffix in LIST
+ -C, --cvs-exclude           auto-ignore files the same way CVS does
+ -f, --filter=RULE           add a file-filtering RULE
+ -F                          same as --filter='dir-merge /.rsync-filter'
+                             repeated: --filter='- .rsync-filter'
+     --exclude=PATTERN       exclude files matching PATTERN
+     --exclude-from=FILE     read exclude patterns from FILE
+     --include=PATTERN       don't exclude files matching PATTERN
+     --include-from=FILE     read include patterns from FILE
+     --files-from=FILE       read list of source-file names from FILE
+ -0, --from0                 all *-from/filter files are delimited by 0s
+ -s, --protect-args          no space-splitting; only wildcard special-chars
+     --address=ADDRESS       bind address for outgoing socket to daemon
+     --port=PORT             specify double-colon alternate port number
+     --sockopts=OPTIONS      specify custom TCP options
+     --blocking-io           use blocking I/O for the remote shell
+     --stats                 give some file-transfer stats
+ -8, --8-bit-output          leave high-bit chars unescaped in output
+ -h, --human-readable        output numbers in a human-readable format
+     --progress              show progress during transfer
+ -P                          same as --partial --progress
+ -i, --itemize-changes       output a change-summary for all updates
+     --out-format=FORMAT     output updates using the specified FORMAT
+     --log-file=FILE         log what we're doing to the specified FILE
+     --log-file-format=FMT   log updates using the specified FMT
+     --password-file=FILE    read daemon-access password from FILE
+     --list-only             list the files instead of copying them
+     --bwlimit=RATE          limit socket I/O bandwidth
+     --stop-at=y-m-dTh:m     Stop rsync at year-month-dayThour:minute
+     --time-limit=MINS       Stop rsync after MINS minutes have elapsed
+     --outbuf=N|L|B          set output buffering to None, Line, or Block
+     --write-batch=FILE      write a batched update to FILE
+     --only-write-batch=FILE like --write-batch but w/o updating destination
+     --read-batch=FILE       read a batched update from FILE
+     --protocol=NUM          force an older protocol version to be used
+     --iconv=CONVERT_SPEC    request charset conversion of filenames
+     --checksum-seed=NUM     set block/file checksum seed (advanced)
+     --noatime               do not alter atime when opening source files
+ -4, --ipv4                  prefer IPv4
+ -6, --ipv6                  prefer IPv6
+     --version               print version number
+(-h) --help                  show this help (-h is --help only if used alone)
+
+Use "rsync --daemon --help" to see the daemon-mode command-line options.
+Please see the rsync(1) and rsyncd.conf(5) man pages for full documentation.
+See http://rsync.samba.org/ for updates, bug reports, and answers
+rsync error: syntax or usage error (code 1) at main.c(1569) [client=3.1.2]
+dummy@dummy-VirtualBox:~$ history
+    1  echo HardInfo
+    2  echo $0
+    3  echo $SHELL
+    4  uname -r
+    5  uname a-
+    6  uname -a
+    7  ls
+    8  ls R-
+    9  ls r-
+   10  ls-a
+   11  ls -r
+   12  mkdir directory
+   13  mkdir Music
+   14  mkdir FolderBaru
+   15  ls FolderBaru
+   16  history
+   17  mv FolderBaru
+   18  mv --help
+   19  apt-get
+   20  date
+   21  time
+   22  env
+   23  mc
+   24  echo &mc
+   25  echo $mc
+   26  echo
+   27  ls -al
+   28  cat FolderBaru
+   29  cat Music
+   30  cat > HardInfo
+   31  cat HardInfo
+   32  cat Tools
+   33  sudo apt-get
+   34  sudo apt-get check
+   35  man
+   36  rsync
+   37  history
+   

@@ -38,6 +38,7 @@ public class Latihan01 {
         System.out.println(i*j);
         System.out.println("");
         System.out.println("urutan data [0-10] ");
+        //eksekusi looping
         for (i=0;i<=10;i++){
             System.out.print(i+"  ");
         }
@@ -63,7 +64,7 @@ public class Latihan01 {
             }
             System.out.println();
         }
-        
+        //penerapan methode switch
         switch(i){ //Latih 4 switch
             case 1:
                 gent="Laki-Laki";
@@ -75,6 +76,7 @@ public class Latihan01 {
                 gent="dipertanyakan";
                 break;
         }
+        //penerapan methode block
         if(i%2==0){ // Latih 4 Block
             System.out.println("\nvariabel i Genap");
         }

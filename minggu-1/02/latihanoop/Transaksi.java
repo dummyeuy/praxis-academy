@@ -1,7 +1,7 @@
 // tema program yg berjalanan ini diganti dari JUAL-BELI (atau transaksi) menjadi PERSEWAAN
 // jenis data variabel dan teks string hanya diganti beberapa oleh dummyeuy
 
-package oop;
+package latihanoop;
 
 //Inheritance digunakan ketika parent memiliki atribut dan metode dan lalu semuanya diturunkan pada child. 
 //Contoh : class Transaksi extends Costumer (Transaksi merupakan kelas child, Costumer merupakan kelas parent).

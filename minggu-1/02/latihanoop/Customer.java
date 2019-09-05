@@ -2,7 +2,7 @@
 // jenis data variabel dan teks string hanya diganti beberapa oleh dummyeuy
 
 
-package oop;
+package latihanoop;
 
 //contoh class objek :
 

@@ -1,7 +1,7 @@
 // tema program yg berjalanan ini diganti dari JUAL-BELI (atau transaksi) menjadi PERSEWAAN
 // jenis data variabel dan teks string hanya diganti beberapa oleh dummyeuy
 
-package oop;
+//package latihanoop;
 
 import java.util.Scanner;
 

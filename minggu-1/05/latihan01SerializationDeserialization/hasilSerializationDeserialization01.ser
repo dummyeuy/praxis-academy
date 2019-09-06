@@ -1,0 +1,14 @@
+run:
+Object has been serialized
+Data before Deserialization.
+name = ab
+age = 20
+a = 2
+b = 1000
+Object has been deserialized
+Data after Deserialization.
+name = ab
+age = 20
+a = 0
+b = 2000
+BUILD SUCCESSFUL (total time: 2 seconds)

@@ -1,0 +1,26 @@
+<?xml version = "1.0"?>
+<Class>
+   <Name>Coba-coba XML</Name>
+   <Sections>
+      <Section>
+         <Name>First Name</Name>
+         <Students>
+            <Student>Qinando</Student>
+            <Student>Lutfi Nur</Student>
+            <Student>Frista Mei</Student>
+            <Student>Puji Maudya</Student>
+            <Student>DUMMY</Student>
+         </Students>
+      </Section>
+      
+      <Section>
+         <Name>Last Name</Name>
+         <Students>
+            <Student>Hermawan</Student>
+            <Student>Hudzaifa</Student>
+            <Student>Dwi Kartika</Student>
+            <Student>Rachma</Student>
+         </Students>
+      </Section>
+   </Sections>
+</Class>

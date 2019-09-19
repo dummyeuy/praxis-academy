@@ -1,0 +1,428 @@
+Microsoft Windows [Version 10.0.17134.1006]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\asus>node -v
+v10.16.3
+
+C:\Users\asus>npm -v
+6.9.0
+
+C:\Users\asus>node
+> exit
+Thrown:
+ReferenceError: exit is not defined
+> quit
+Thrown:
+ReferenceError: quit is not defined
+>
+(To exit, press ^C again or type .exit)
+> .exit
+
+C:\Users\asus>cd ..
+
+C:\Users>cd ..
+
+C:\>D:
+
+D:\>cd Project
+
+D:\Project>cd dari-vscode
+
+D:\Project\dari-vscode>cd minggu-3
+
+D:\Project\dari-vscode\minggu-3>npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (minggu-3) latihanNPM
+Sorry, name can no longer contain capital letters.
+package name: (minggu-3) intronpm
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to D:\Project\dari-vscode\minggu-3\package.json:
+
+{
+  "name": "intronpm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes)
+
+D:\Project\dari-vscode\minggu-3>npm init -y
+Wrote to D:\Project\dari-vscode\minggu-3\package.json:
+
+{
+  "name": "intronpm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}
+
+
+
+D:\Project\dari-vscode\minggu-3>npm
+
+Usage: npm <command>
+
+where <command> is one of:
+    access, adduser, audit, bin, bugs, c, cache, ci, cit,
+    clean-install, clean-install-test, completion, config,
+    create, ddp, dedupe, deprecate, dist-tag, docs, doctor,
+    edit, explore, get, help, help-search, hook, i, init,
+    install, install-ci-test, install-test, it, link, list, ln,
+    login, logout, ls, org, outdated, owner, pack, ping, prefix,
+    profile, prune, publish, rb, rebuild, repo, restart, root,
+    run, run-script, s, se, search, set, shrinkwrap, star,
+    stars, start, stop, t, team, test, token, tst, un,
+    uninstall, unpublish, unstar, up, update, v, version, view,
+    whoami
+
+npm <command> -h  quick help on <command>
+npm -l            display full usage info
+npm help <term>   search for help on <term>
+npm help npm      involved overview
+
+Specify configs in the ini-formatted file:
+    C:\Users\asus\.npmrc
+or on the command line via: npm <command> --key value
+Config info can be viewed via: npm help config
+
+npm@6.9.0 C:\Program Files\nodejs\node_modules\npm
+
+D:\Project\dari-vscode\minggu-3>npm install express
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN intronpm@1.0.0 No description
+npm WARN intronpm@1.0.0 No repository field.
+
++ express@4.17.1
+added 50 packages from 37 contributors and audited 126 packages in 104.256s
+found 0 vulnerabilities
+
+
+D:\Project\dari-vscode\minggu-3>dir
+ Volume in drive D is neocorpus
+ Volume Serial Number is 266A-1B53
+
+ Directory of D:\Project\dari-vscode\minggu-3
+
+19/09/2019  10:41    <DIR>          .
+19/09/2019  10:41    <DIR>          ..
+19/09/2019  10:41    <DIR>          node_modules
+19/09/2019  10:41            14.284 package-lock.json
+19/09/2019  10:41               272 package.json
+               2 File(s)         14.556 bytes
+               3 Dir(s)  30.037.508.096 bytes free
+
+D:\Project\dari-vscode\minggu-3>npm install packagebaru1 --save-dev
+npm ERR! code E404
+npm ERR! 404 Not Found - GET https://registry.npmjs.org/packagebaru1 - Not found
+npm ERR! 404
+npm ERR! 404  'packagebaru1@latest' is not in the npm registry.
+npm ERR! 404 You should bug the author to publish it (or use the name yourself!)
+npm ERR! 404
+npm ERR! 404 Note that you can also install from a
+npm ERR! 404 tarball, folder, http url, or git url.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\asus\AppData\Roaming\npm-cache\_logs\2019-09-19T03_45_37_840Z-debug.log
+
+D:\Project\dari-vscode\minggu-3>npm install -g node-static
+C:\Users\asus\AppData\Roaming\npm\static -> C:\Users\asus\AppData\Roaming\npm\node_modules\node-static\bin\cli.js
++ node-static@0.7.11
+added 6 packages from 8 contributors in 13.408s
+
+D:\Project\dari-vscode\minggu-3>npm update
+
+D:\Project\dari-vscode\minggu-3>npm
+
+Usage: npm <command>
+
+where <command> is one of:
+    access, adduser, audit, bin, bugs, c, cache, ci, cit,
+    clean-install, clean-install-test, completion, config,
+    create, ddp, dedupe, deprecate, dist-tag, docs, doctor,
+    edit, explore, get, help, help-search, hook, i, init,
+    install, install-ci-test, install-test, it, link, list, ln,
+    login, logout, ls, org, outdated, owner, pack, ping, prefix,
+    profile, prune, publish, rb, rebuild, repo, restart, root,
+    run, run-script, s, se, search, set, shrinkwrap, star,
+    stars, start, stop, t, team, test, token, tst, un,
+    uninstall, unpublish, unstar, up, update, v, version, view,
+    whoami
+
+npm <command> -h  quick help on <command>
+npm -l            display full usage info
+npm help <term>   search for help on <term>
+npm help npm      involved overview
+
+Specify configs in the ini-formatted file:
+    C:\Users\asus\.npmrc
+or on the command line via: npm <command> --key value
+Config info can be viewed via: npm help config
+
+npm@6.9.0 C:\Program Files\nodejs\node_modules\npm
+
+D:\Project\dari-vscode\minggu-3>npm update
+
+D:\Project\dari-vscode\minggu-3>npm update -g
+
+D:\Project\dari-vscode\minggu-3>npm update express -g
+
+D:\Project\dari-vscode\minggu-3>npm uninstall npm list
+npm WARN intronpm@1.0.0 No description
+npm WARN intronpm@1.0.0 No repository field.
+
+audited 126 packages in 2.647s
+found 0 vulnerabilities
+
+
+D:\Project\dari-vscode\minggu-3>npm list
+intronpm@1.0.0 D:\Project\dari-vscode\minggu-3
+`-- express@4.17.1
+  +-- accepts@1.3.7
+  | +-- mime-types@2.1.24
+  | | `-- mime-db@1.40.0
+  | `-- negotiator@0.6.2
+  +-- array-flatten@1.1.1
+  +-- body-parser@1.19.0
+  | +-- bytes@3.1.0
+  | +-- content-type@1.0.4 deduped
+  | +-- debug@2.6.9 deduped
+  | +-- depd@1.1.2 deduped
+  | +-- http-errors@1.7.2
+  | | +-- depd@1.1.2 deduped
+  | | +-- inherits@2.0.3
+  | | +-- setprototypeof@1.1.1 deduped
+  | | +-- statuses@1.5.0 deduped
+  | | `-- toidentifier@1.0.0
+  | +-- iconv-lite@0.4.24
+  | | `-- safer-buffer@2.1.2
+  | +-- on-finished@2.3.0 deduped
+  | +-- qs@6.7.0 deduped
+  | +-- raw-body@2.4.0
+  | | +-- bytes@3.1.0 deduped
+  | | +-- http-errors@1.7.2 deduped
+  | | +-- iconv-lite@0.4.24 deduped
+  | | `-- unpipe@1.0.0 deduped
+  | `-- type-is@1.6.18 deduped
+  +-- content-disposition@0.5.3
+  | `-- safe-buffer@5.1.2 deduped
+  +-- content-type@1.0.4
+  +-- cookie@0.4.0
+  +-- cookie-signature@1.0.6
+  +-- debug@2.6.9
+  | `-- ms@2.0.0
+  +-- depd@1.1.2
+  +-- encodeurl@1.0.2
+  +-- escape-html@1.0.3
+  +-- etag@1.8.1
+  +-- finalhandler@1.1.2
+  | +-- debug@2.6.9 deduped
+  | +-- encodeurl@1.0.2 deduped
+  | +-- escape-html@1.0.3 deduped
+  | +-- on-finished@2.3.0 deduped
+  | +-- parseurl@1.3.3 deduped
+  | +-- statuses@1.5.0 deduped
+  | `-- unpipe@1.0.0
+  +-- fresh@0.5.2
+  +-- merge-descriptors@1.0.1
+  +-- methods@1.1.2
+  +-- on-finished@2.3.0
+  | `-- ee-first@1.1.1
+  +-- parseurl@1.3.3
+  +-- path-to-regexp@0.1.7
+  +-- proxy-addr@2.0.5
+  | +-- forwarded@0.1.2
+  | `-- ipaddr.js@1.9.0
+  +-- qs@6.7.0
+  +-- range-parser@1.2.1
+  +-- safe-buffer@5.1.2
+  +-- send@0.17.1
+  | +-- debug@2.6.9 deduped
+  | +-- depd@1.1.2 deduped
+  | +-- destroy@1.0.4
+  | +-- encodeurl@1.0.2 deduped
+  | +-- escape-html@1.0.3 deduped
+  | +-- etag@1.8.1 deduped
+  | +-- fresh@0.5.2 deduped
+  | +-- http-errors@1.7.2 deduped
+  | +-- mime@1.6.0
+  | +-- ms@2.1.1
+  | +-- on-finished@2.3.0 deduped
+  | +-- range-parser@1.2.1 deduped
+  | `-- statuses@1.5.0 deduped
+  +-- serve-static@1.14.1
+  | +-- encodeurl@1.0.2 deduped
+  | +-- escape-html@1.0.3 deduped
+  | +-- parseurl@1.3.3 deduped
+  | `-- send@0.17.1 deduped
+  +-- setprototypeof@1.1.1
+  +-- statuses@1.5.0
+  +-- type-is@1.6.18
+  | +-- media-typer@0.3.0
+  | `-- mime-types@2.1.24 deduped
+  +-- utils-merge@1.0.1
+  `-- vary@1.1.2
+
+
+D:\Project\dari-vscode\minggu-3>npm list depth 3
+intronpm@1.0.0 D:\Project\dari-vscode\minggu-3
+`-- (empty)
+
+
+D:\Project\dari-vscode\minggu-3>npm list --depth 0
+intronpm@1.0.0 D:\Project\dari-vscode\minggu-3
+`-- express@4.17.1
+
+
+D:\Project\dari-vscode\minggu-3>npm list --depth 2
+intronpm@1.0.0 D:\Project\dari-vscode\minggu-3
+`-- express@4.17.1
+  +-- accepts@1.3.7
+  | +-- mime-types@2.1.24
+  | `-- negotiator@0.6.2
+  +-- array-flatten@1.1.1
+  +-- body-parser@1.19.0
+  | +-- bytes@3.1.0
+  | +-- content-type@1.0.4 deduped
+  | +-- debug@2.6.9 deduped
+  | +-- depd@1.1.2 deduped
+  | +-- http-errors@1.7.2
+  | +-- iconv-lite@0.4.24
+  | +-- on-finished@2.3.0 deduped
+  | +-- qs@6.7.0 deduped
+  | +-- raw-body@2.4.0
+  | `-- type-is@1.6.18 deduped
+  +-- content-disposition@0.5.3
+  | `-- safe-buffer@5.1.2 deduped
+  +-- content-type@1.0.4
+  +-- cookie@0.4.0
+  +-- cookie-signature@1.0.6
+  +-- debug@2.6.9
+  | `-- ms@2.0.0
+  +-- depd@1.1.2
+  +-- encodeurl@1.0.2
+  +-- escape-html@1.0.3
+  +-- etag@1.8.1
+  +-- finalhandler@1.1.2
+  | +-- debug@2.6.9 deduped
+  | +-- encodeurl@1.0.2 deduped
+  | +-- escape-html@1.0.3 deduped
+  | +-- on-finished@2.3.0 deduped
+  | +-- parseurl@1.3.3 deduped
+  | +-- statuses@1.5.0 deduped
+  | `-- unpipe@1.0.0
+  +-- fresh@0.5.2
+  +-- merge-descriptors@1.0.1
+  +-- methods@1.1.2
+  +-- on-finished@2.3.0
+  | `-- ee-first@1.1.1
+  +-- parseurl@1.3.3
+  +-- path-to-regexp@0.1.7
+  +-- proxy-addr@2.0.5
+  | +-- forwarded@0.1.2
+  | `-- ipaddr.js@1.9.0
+  +-- qs@6.7.0
+  +-- range-parser@1.2.1
+  +-- safe-buffer@5.1.2
+  +-- send@0.17.1
+  | +-- debug@2.6.9 deduped
+  | +-- depd@1.1.2 deduped
+  | +-- destroy@1.0.4
+  | +-- encodeurl@1.0.2 deduped
+  | +-- escape-html@1.0.3 deduped
+  | +-- etag@1.8.1 deduped
+  | +-- fresh@0.5.2 deduped
+  | +-- http-errors@1.7.2 deduped
+  | +-- mime@1.6.0
+  | +-- ms@2.1.1
+  | +-- on-finished@2.3.0 deduped
+  | +-- range-parser@1.2.1 deduped
+  | `-- statuses@1.5.0 deduped
+  +-- serve-static@1.14.1
+  | +-- encodeurl@1.0.2 deduped
+  | +-- escape-html@1.0.3 deduped
+  | +-- parseurl@1.3.3 deduped
+  | `-- send@0.17.1 deduped
+  +-- setprototypeof@1.1.1
+  +-- statuses@1.5.0
+  +-- type-is@1.6.18
+  | +-- media-typer@0.3.0
+  | `-- mime-types@2.1.24 deduped
+  +-- utils-merge@1.0.1
+  `-- vary@1.1.2
+
+
+D:\Project\dari-vscode\minggu-3>npm help
+
+Usage: npm <command>
+
+where <command> is one of:
+    access, adduser, audit, bin, bugs, c, cache, ci, cit,
+    clean-install, clean-install-test, completion, config,
+    create, ddp, dedupe, deprecate, dist-tag, docs, doctor,
+    edit, explore, get, help, help-search, hook, i, init,
+    install, install-ci-test, install-test, it, link, list, ln,
+    login, logout, ls, org, outdated, owner, pack, ping, prefix,
+    profile, prune, publish, rb, rebuild, repo, restart, root,
+    run, run-script, s, se, search, set, shrinkwrap, star,
+    stars, start, stop, t, team, test, token, tst, un,
+    uninstall, unpublish, unstar, up, update, v, version, view,
+    whoami
+
+npm <command> -h  quick help on <command>
+npm -l            display full usage info
+npm help <term>   search for help on <term>
+npm help npm      involved overview
+
+Specify configs in the ini-formatted file:
+    C:\Users\asus\.npmrc
+or on the command line via: npm <command> --key value
+Config info can be viewed via: npm help config
+
+npm@6.9.0 C:\Program Files\nodejs\node_modules\npm
+
+D:\Project\dari-vscode\minggu-3>npm install -h
+
+npm install (with no args, in package dir)
+npm install [<@scope>/]<pkg>
+npm install [<@scope>/]<pkg>@<tag>
+npm install [<@scope>/]<pkg>@<version>
+npm install [<@scope>/]<pkg>@<version range>
+npm install <folder>
+npm install <tarball file>
+npm install <tarball url>
+npm install <git:// url>
+npm install <github username>/<github project>
+
+aliases: i, isntall, add
+common options: [--save-prod|--save-dev|--save-optional] [--save-exact] [--no-save]
+
+D:\Project\dari-vscode\minggu-3>

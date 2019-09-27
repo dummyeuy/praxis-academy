@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan VueJS - Tree View | dummyeuy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- item template -->
+    <script type="text/x-template" ide="item-template">
+    <li>
+        <div:
+        class="{bold: isFolder"
+        @click="toggle"
+        @dblclick="makeFolder">
+        {{item.name}}
+        <span v-if="isFolder">[{{isOpen ? '-' : '+'}}]</span>
+        </div>
+        <ul v-show="isOpen" v-if="isFolder">
+            <tree-item
+                class="item"
+                v-for="(child, index) in item.children"
+                :key="index"
+                :item="child"
+                @make-folder="$emit('add-item', $event)"
+                ></tree-item>
+                <li class="add" @click="$emit('add-item', item)">+</li>
+        </ul>
+    </script>
+    <p>(You can double click on an item to turn it into a folder.)</p>
+
+    <!-- the demo root element -->
+    <ul id="demo">
+        <tree-item
+            class="item"
+            :item="treeData"
+            @make-folder="makeFolder"
+            @add-item="addItem"
+        ></tree-item>
+    </ul>
+    <script src="script.js"></script>  
+</body>
+</html>

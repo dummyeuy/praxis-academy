@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>example Wrapper Component | dummyeuy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+    <div id="el"></div>
+
+    <!-- using string template here to work around HTML <option> placement restriction -->
+    <script type="text/x-template" id="demo-template">
+        <div>
+            <p>Selected: {{ selected }}</p>
+            <select2 :options="options" v-model="selected">
+             <option disabled value="0">Select one</option>
+            </select2>
+        </div>
+    </script>
+
+    <script type="text/x-template" id="select2-template">
+        <select>
+          <slot></slot>
+        </select>
+    </script>
+    
+    <script src="scriptWrapperComponent.js"></script>
+</body>
+</html>

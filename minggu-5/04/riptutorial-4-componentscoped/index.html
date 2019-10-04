@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[RIPTutorial] Component scoped (not global) | dummyeuy</title>
+</head>
+<body>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <script type="x-template" id="form-template">
+        <label>{{inputLabel}} :</label>
+        <input type="text" v-model="name"/>
+    </script>
+
+    <div id="app">
+        <h2>{{appName}}</h2>
+        <form-component title="This is a form" v-bind:name="userName"></form-component>
+    </div>
+    <script src="scriptComponentScoped.js"></script>
+</body>
+</html>

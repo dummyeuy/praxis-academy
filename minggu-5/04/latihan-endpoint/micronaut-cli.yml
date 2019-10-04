@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: latihan.endpoint
+---
+testFramework: junit
+sourceLanguage: java

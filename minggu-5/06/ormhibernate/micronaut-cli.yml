@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: ormhibernate
+---
+testFramework: junit
+sourceLanguage: java

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Steam DOM - (dummy) Registrasi Teacher</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script> -->
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
+    <div class="container">
+        <button class="btn btn-success mt-5 mb-5" @click="addNewTeacherForm">
+            New Teacher-
+        </button>
+        <div class="card mb-3" v-for="(teacher, index) in teachers">
+            <div class="card-body">
+                <span class="float-right" style="cursor:pointer" @click="deleteTeacherForm(index)">
+                    X
+                </span>
+                <h4 class="card-title">Add teacher (index: {{ index }} )</h4>
+                <div class="teacher-form">
+                    <input type="text" class="form-control mb-2" placeholder="NIK" v-model="teacher.nik">
+
+                    <input type="text" class="form-control mb-2" placeholder="Nama" v-model="teacher.name">
+                    <!-- pengisian form jenis kelamin harus dibuat tipe option antara L/P -->
+                    <input type="text" class="form-control mb-2" placeholder="Jenis Kelamin" v-model="teacher.gender">
+
+                    <textarea name="" class="form-control mb-2" cols="30" rows="3" placeholder="Alamat"
+                        v-model="teacher.address"></textarea>
+
+                    <input type="text" class="form-control mb-2"
+                        placeholder="Tanggal Lahir (YYYY/MM/DD - contoh: 2001-12-31)" v-model="teacher.date">
+
+                    <input type="text" class="form-control mb-2" placeholder="Tempat Lahir" v-model="teacher.place">
+
+                    <input type="text" class="form-control mb-2" placeholder="Kepercayaan" v-model="religion">
+
+                    <input type="radio" name="gender" value="male"> Male<br>
+                    <input type="radio" name="gender" value="female"> Female<br>
+                    <input type="radio" name="gender" value="other"> Other
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '.container',
+            data: {
+                teachers: [{
+                    name: '',
+                    gender: '',
+                    birth_date: '',
+                    birth_place: '',
+                    address: '',
+                    nisn: ''
+                }]
+            },
+            methods: {
+                addNewTeacherForm() {
+                    this.teachers.push({
+                        name: '',
+                        gender: '',
+                        birth_date: '',
+                        birth_place: '',
+                        address: '',
+                        nisn: ''
+                    })
+                },
+
+                deleteTeacherForm(index) {
+                    this.teachers.splice(index, 1)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

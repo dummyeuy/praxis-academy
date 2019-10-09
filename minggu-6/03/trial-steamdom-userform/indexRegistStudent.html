@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Steam DOM - (dummy) Registrasi Student</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script> -->
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
+    <div class="container">
+        <button class="btn btn-success mt-5 mb-5" @click="addNewStudentForm">
+            New Student
+        </button>
+        <div class="card mb-3" v-for="(student, index) in students">
+            <div class="card-body">
+                <span class="float-right" style="cursor:pointer" @click="deleteStudentForm(index)">
+                    X
+                </span>
+                <h4 class="card-title">Add student (index: {{ index }} )</h4>
+                <div class="student-form">
+                    <input type="text" class="form-control mb-2" placeholder="Nama" v-model="student.name">
+                    <!-- pengisian form jenis kelamin harus dibuat tipe option antara L/P -->
+                    <input type="text" class="form-control mb-2" placeholder="Jenis Kelamin" v-model="student.gender">
+
+                    <input type="text" class="form-control mb-2"
+                        placeholder="Tanggal Lahir (YYYY/MM/DD - contoh: 2001-12-31)" v-model="student.birth_date">
+
+                    <input type="text" class="form-control mb-2" placeholder="Tempat Lahir"
+                        v-model="student.birth_place">
+
+                    <textarea name="" class="form-control mb-2" cols="30" rows="3" placeholder="Alamat"
+                        v-model="student.address"></textarea>
+
+                    <input type="text" class="form-control mb-2" placeholder="NISN" v-model="student.nisn">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '.container',
+            data: {
+                students: [{
+                    name: '',
+                    gender: '',
+                    birth_date: '',
+                    birth_place: '',
+                    address: '',
+                    nisn: ''
+                }]
+            },
+            methods: {
+                addNewStudentForm() {
+                    this.students.push({
+                        name: '',
+                        gender: '',
+                        birth_date: '',
+                        birth_place: '',
+                        address: '',
+                        nisn: ''
+                    })
+                },
+
+                deleteStudentForm(index) {
+                    this.students.splice(index, 1)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
